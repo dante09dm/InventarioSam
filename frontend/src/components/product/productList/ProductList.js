@@ -106,9 +106,9 @@ const ProductList = ({ products, isLoading }) => {
                   <th>s/n</th>
                   <th>Name</th>
                   <th>Category</th>
-                  <th>Price</th>
+                  <th>Weight</th>
                   <th>Quantity</th>
-                  <th>Value</th>
+                  <th>Product Weight</th>
                   <th>Action</th>
                 </tr>
               </thead>
@@ -122,13 +122,13 @@ const ProductList = ({ products, isLoading }) => {
                       <td>{shortenText(name, 16)}</td>
                       <td>{category}</td>
                       <td>
-                        {"$"}
                         {price}
+                        {" GR"}
                       </td>
                       <td>{quantity}</td>
                       <td>
-                        {"$"}
-                        {price * quantity}
+                        {price * (quantity / 1000)}
+                        {" KG"}
                       </td>
                       <td className="icons">
                         <span>

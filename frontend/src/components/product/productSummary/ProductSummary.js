@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./ProductSummary.scss";
 import { AiFillDollarCircle } from "react-icons/ai";
 import { BsCart4, BsCartX } from "react-icons/bs";
+import { LiaWeightHangingSolid } from "react-icons/lia";
 import { BiCategory } from "react-icons/bi";
 import InfoBox from "../../infoBox/InfoBox";
 import { useDispatch, useSelector } from "react-redux";
@@ -19,6 +20,7 @@ const earningIcon = <AiFillDollarCircle size={40} color="#fff" />;
 const productIcon = <BsCart4 size={40} color="#fff" />;
 const categoryIcon = <BiCategory size={40} color="#fff" />;
 const outOfStockIcon = <BsCartX size={40} color="#fff" />;
+const weightIcon = <LiaWeightHangingSolid size={40} color="#fff" />;
 
 // Format Amount
 export const formatNumbers = (x) => {
@@ -48,9 +50,9 @@ const ProductSummary = ({ products }) => {
           bgColor="card1"
         />
         <InfoBox
-          icon={earningIcon}
-          title={"Total Store Value"}
-          count={`$${formatNumbers(totalStoreValue.toFixed(2))}  `}
+          icon={weightIcon}
+          title={"Total Weight"}
+          count={`${formatNumbers(totalStoreValue.toFixed(2))} KG `}
           bgColor="card2"
         />
         <InfoBox
