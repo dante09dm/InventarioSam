@@ -17,7 +17,6 @@ import {
   getProducts,
 } from "../../../redux/features/product/productSlice";
 import { Link } from "react-router-dom";
-
 const ProductList = ({ products, isLoading }) => {
   const [search, setSearch] = useState("");
   const filteredProducts = useSelector(selectFilteredPoducts);
