@@ -10,6 +10,13 @@
       max-width: 300px;
     }
 
+    .barcode-image {
+      max-width: 100px; /* or your preferred width */
+      height: auto; /* maintain aspect ratio */
+      display: block; /* center image in the cell */
+      margin: 0 auto; /* add some space around the image */
+    }
+    
     table {
       border-collapse: collapse;
       width: 100%;
