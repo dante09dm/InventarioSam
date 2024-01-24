@@ -245,4 +245,5 @@ export const selectTotalStoreValue = (state) => state.product.totalStoreValue;
 export const selectOutOfStock = (state) => state.product.outOfStock;
 export const selectCategory = (state) => state.product.category;
 
+
 export default productSlice.reducer;

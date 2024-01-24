@@ -28,6 +28,11 @@ const productSchema = mongoose.Schema(
       required: [true, "Please add a quantity"],
       trim: true,
     },
+    barcode: {
+      type: String,
+      required: [true, "Please add a barcode"], // Corrected the error message here
+      trim: true,
+    },
     price: {
       type: String,
       required: [true, "Please add a price"],

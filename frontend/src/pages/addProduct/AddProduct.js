@@ -12,6 +12,7 @@ const initialState = {
   name: "",
   category: "",
   quantity: "",
+  barcode:"",
   price: "",
 };
 
@@ -25,7 +26,7 @@ const AddProduct = () => {
 
   const isLoading = useSelector(selectIsLoading);
 
-  const { name, category, price, quantity } = product;
+  const { name, category, price, quantity,barcode } = product;
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -52,6 +53,7 @@ const AddProduct = () => {
     formData.append("category", category);
     formData.append("quantity", Number(quantity));
     formData.append("price", price);
+    formData.append("barcode", barcode);
     formData.append("description", description);
     formData.append("image", productImage);
 

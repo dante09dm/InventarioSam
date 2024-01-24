@@ -66,6 +66,9 @@ const ProductDetail = () => {
               <b>&rarr; Category : </b> {product.category}
             </p>
             <p>
+              <b>&rarr; Barcode : </b> {product.barcode}
+            </p>
+            <p>
               <b>&rarr; Price : </b> {"$"}
               {product.price}
             </p>

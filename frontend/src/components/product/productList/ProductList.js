@@ -115,7 +115,7 @@ const ProductList = ({ products, isLoading }) => {
 
               <tbody>
   {currentItems.map((product, index) => {
-    const { _id, name, category, price, quantity, image } = product;
+    const { _id, name, category, price, barcode, quantity, image } = product;
     return (
       <tr key={_id}>
         <td>{index + 1}</td>
@@ -124,13 +124,7 @@ const ProductList = ({ products, isLoading }) => {
         <td>{`${price} GR`}</td>
         <td>{quantity}</td>
         <td>{(price * (quantity / 1000)).toFixed(2)} KG</td>
-        <td>
-          {image && image.filePath ? (
-            <img src={image.filePath} alt={`${name} barcode`} className="barcode-image" />
-          ) : (
-            "No Barcode"
-          )}
-        </td>
+        <td>{barcode}</td>
         <td className="icons">
           <span>
             <Link to={`/product-detail/${_id}`}>

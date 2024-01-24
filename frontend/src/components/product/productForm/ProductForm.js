@@ -65,6 +65,15 @@ const ProductForm = ({
             onChange={handleInputChange}
           />
 
+          <label>Product Barcode:</label>
+          <input
+          type="text"
+          placeholder="Product Barcode"
+          name="barcode"
+          value={product?.barcode}
+          onChange={handleInputChange}
+          /> 
+
           <label>Product Quantity:</label>
           <input
             type="text"
