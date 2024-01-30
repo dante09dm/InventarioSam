@@ -10,7 +10,7 @@ import { SET_LOGIN, SET_NAME } from "../../redux/features/auth/authSlice";
 import Loader from "../../components/loader/Loader";
 
 const initialState = {
-  email: "user@inventorycontrol.com",
+  email: "user@invcontrol.com",
   password: "user123",
 };
 
